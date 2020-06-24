@@ -20,6 +20,12 @@ var app = SetupExpress();
 	return app;
 };
 
+app.get("/",(req,res)=>{
+
+	res.sendFile(__dirname+'/public/index.html');
+})
+
+	ConfigureExpress(app);
 
 
 
