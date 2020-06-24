@@ -27,6 +27,23 @@ app.get("/",(req,res)=>{
 
 	ConfigureExpress(app);
 
+function ConnectDB ()
+{
+	var con = mysql.createConnection(
+	{
+	host: "localhost",
+	user: "root",
+	password: "",
+	database: "my_db"					
+	});
+
+	con.connect(function(err) 
+	{
+	if (err) throw err;
+	console.log("Connected!");
+	}); 
+
+}
 
 
 function ConfigureExpress(app)
