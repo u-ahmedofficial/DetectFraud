@@ -136,7 +136,7 @@
     <div class="login-form">
         <img src="avatar.jpg" class="avatar">
         <h2>bank login Form</h2>
-        <form method="POST" accept-charset="utf-8"  action="/login">
+        <form method="POST" accept-charset="utf-8" onsubmit="return handler()" action="/login">
             <i class="fas fa-user"></i>
             <input type="text" id="email" name="email"  placeholder="Enter Email">
             <label class="empty"> *Email cannot be empty!</label><br>
@@ -150,7 +150,7 @@
             <label class="valid"> Login Successful!</label>
       
             <input type="submit" name="login" value="Sign In">
-            <input type="button" name="register" value="Register" onclick="window.location.href='register.html';">
+            <input type="button" name="register" value="Register" onclick="window.location.href='register';">
         </form>
           <div class="social">
         <ul>
