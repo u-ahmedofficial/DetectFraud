@@ -30,6 +30,11 @@ app.use("/register",(req,res)=>{
 	res.render('register');
 });
 
+app.use("/index",(req,res)=>{
+
+	res.render('index');
+});
+
 app.use("/admin",(req,res)=>{
 
 	res.render('Admin');
@@ -40,7 +45,7 @@ app.use("/user",(req,res)=>{
 	res.render('User');
 });
 
-app.use("/table",(req,res)=>{
+app.use("/Table",(req,res)=>{
 
 	res.render('Table');
 });
