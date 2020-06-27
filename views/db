@@ -1,0 +1,63 @@
+DATABASE
+
+Tables
+
+Users(id int, role int, username,email,password)
+
+Payments()
+
+Session(int id, int role, int active)
+
+
+
+CREATE TABLE IF NOT EXISTS Payments(
+Gender integer,
+Married integer,
+Dependents integer,
+Education integer,
+Self_Employed integer,
+ApplicantIncome float,
+Coapplicant_Income float,
+LoanAmount float,
+Loan_Amount_Term float,
+CreditHistory float,
+Property_Area integer
+)
+
+import pandas as pd
+const fs = require('fs');
+
+const csv = require('fast-csv');
+
+let stream = fs.createReadStream("ULoan_Test");
+let myData = [];
+let csvStream = csv
+    .parse()
+    .on("data", function (data) {
+        myData.push(data);
+    })
+    .on("end", function () {
+		myData.shift();
+		
+		// create a new connection to the database
+		const connection = mysql.createConnection({
+			host: 'localhost',
+			user: 'root',
+			password: '',
+			database: 'detectfraud'
+		});
+
+        // open the connection
+		connection.connect((error) => {
+			if (error) {
+				console.error(error);
+			} else {
+				let query = 'INSERT INTO Payments(Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,Coapplicant_Income,LoanAmount,Loan_Amount_Term,CreditHistory,Property_Area) VALUES ?';
+				connection.query(query, [myData], (error, response) => {
+					console.log(error || response);
+				});
+			}
+		});
+   	});
+
+stream.pipe(csvStream);
