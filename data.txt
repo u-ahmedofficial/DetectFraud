@@ -1,0 +1,1 @@
+{"malePercent": 79.58, "femalePercent": 20.42, "marriedPercent": 64.71, "unmarriedPercent": 35.29}
