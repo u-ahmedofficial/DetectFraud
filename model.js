@@ -110,7 +110,7 @@ function createDB()
 
 			});
 
-		conn.query('CREATE TABLE EXISTS Fraud(Gender integer,Married integer,Dependents integer,Education integer,Self_Employed integer,ApplicantIncome float,Coapplicant_Income float,LoanAmount float,Loan_Amount_Term float,CreditHistory float,Property_Area integer)',(error,result)=>
+		conn.query('CREATE TABLE Fraud(Gender integer,Married integer,Dependents integer,Education integer,Self_Employed integer,ApplicantIncome float,Coapplicant_Income float,LoanAmount float,Loan_Amount_Term float,CreditHistory float,Property_Area integer)',(error,result)=>
 			{
 				if (error){ 
 					console.log(" ");
