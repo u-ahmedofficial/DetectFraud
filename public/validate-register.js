@@ -4,7 +4,7 @@ function handler () {
     id= document.getElementsByClassName("hidden");
     if ( checkName(id[0]) && checkEmail(id[1]) && checkPassword(id[2]) ) 
         {     
-            document.getElementsByClassName("valid")[0].style.visibility="visible";
+            //document.getElementsByClassName("valid")[0].style.visibility="visible";
 			
             return true;
         } 
@@ -34,10 +34,8 @@ function checkName (id) {
         return false;
      }   
      else
-     {
+     {      document.getElementsByClassName("empty")[0].style.visibility="hidden";
             id.style.visibility = "hidden";
-			console.log("Valid Username Entered!");
-			console.log("registerUsernameValid Passed");
             return true;
         }
 }
@@ -62,9 +60,8 @@ function checkEmail (id) {
             }   
      
                     else {
+                          document.getElementsByClassName("empty")[1].style.visibility="hidden";
                           id.style.visibility = "hidden";
-						  console.log("Valid Email Addres Entered!");
-						  console.log("registerEmailValid Passed");
                           return true;
        }
 }
@@ -87,9 +84,8 @@ function checkPassword (id) {
                 return false; } 
 
                     else {
+                        document.getElementsByClassName("empty")[2].style.visibility="hidden"; 
                         id.style.visibility = "hidden";
-						 console.log("Valid Password Entered!");
-						 console.log("registerPasswordValid Passed");
                         return true; }
     
 }

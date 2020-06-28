@@ -4,9 +4,9 @@ function handler () {
     if ( checkEmail(id[0]) && checkPassword(id[1]) ) 
 
         {
-					document.getElementsByClassName("valid")[0].style.visibility="visible"; 
-					console.log("Login Successful");
-					console.log("LOGIN Test Passed!");
+					//document.getElementsByClassName("valid")[0].style.visibility="visible"; 
+					// console.log("Login Successful");
+					// console.log("LOGIN Test Passed!");
                     return true;
         } 
           else
@@ -26,14 +26,10 @@ function checkEmail (id) {
 			
 			return false;
         }
-          if( val.length > 0 && val=="maryam@gmail.com"){
-          return true;
-           }
-           else if (val.length > 0 && val != "maryam@gmail.com"){
-            document.getElementsByClassName("invalid")[0].style.visibility="visible";
-			console.log("Email you entered doesn't match to any account!");
-			console.log("loginEmailValid Passed");
-			return false;
+        else {
+                            document.getElementsByClassName("invalid")[0].style.visibility="hidden";
+                            id.style.visibility="hidden";
+                            return true;
                           }
        
 }
@@ -46,15 +42,12 @@ function checkPassword (id) {
 			console.log("loginPasswordEmpty Passed");
 			return false;
         }
-        
-             if(val=="1235"){
-                return true;
-             }
              else{
-                document.getElementsByClassName("invalid")[1].style.visibility="visible";
-				console.log("Password you entered doesn't match to any account!");
-				console.log("loginPasswordValid Passed");
-				return false;
+                document.getElementsByClassName("invalid")[1].style.visibility="hidden";
+                id.style.visibility="hidden"; 
+				// console.log("Password you entered doesn't match to any account!");
+				// console.log("loginPasswordValid Passed");
+				return true;
              }
     
 }
