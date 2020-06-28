@@ -56,7 +56,7 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
-                            <a class="js-arrow" href="Admin">
+                            <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                           
                         </li>
@@ -70,7 +70,7 @@
                                 <i class="far fa-check-square"></i>Forms</a>
                         </li> -->
                      <li>
-                            <a href="Table">
+                            <a href="#">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                             </ul>
@@ -81,16 +81,16 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="index">Login</a>
+                                    <a href="#">Login</a>
                                 </li>
                                 <li>
-                                    <a href="register">Register</a>
+                                    <a href="#">Register</a>
                                 </li>
                       <!--          <li>
                                     <a href="#">Forget Password</a>
                                 </li> -->
                                  <li>
-                            <a href="Table">
+                            <a href="#">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                             </ul>
@@ -126,7 +126,7 @@
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
-                            <a href="Table">
+                            <a href="#">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                   <!--      <li>
@@ -139,10 +139,10 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="index">Login</a>
+                                    <a href="#">Login</a>
                                 </li>
                                 <li>
-                                    <a href="register">Register</a>
+                                    <a href="#">Register</a>
                                 </li>
                          <!--       <li>
                                     <a href="#">Forget Password</a>
@@ -184,7 +184,7 @@
                                             <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">Umair</a>
+                                            <a class="js-acc-btn" href="#"><% if(Username){%> <%=Username%> <%} %></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -195,9 +195,9 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">Umair Ahmed</a>
+                                                        <a href="#"><% if(Username){%> <%=Username%> <%} %></a>
                                                     </h5>
-                                                    <span class="email">umairahmed1.com</span>
+                                                    <span class="email"><% if(Email){%> <%=Email%> <%} %></span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
@@ -215,8 +215,13 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
+                                               <form action="/logout" method="get" accept-charset="utf-8">
+                                                
+                                                <input type="hidden" name="username" value="<%if(Username){%> <%=Username%><%} %>">
+                                                <input type="hidden" name="email" value="<%if(Email){%> <%=Email%><%} %>">
                                                 <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                    <i class="zmdi zmdi-power"></i><input type="submit" value="Logout"></a>
+                                              </form>
                                             </div>
                                         </div>
                                     </div>
@@ -253,7 +258,7 @@
                                             </div>
                                         </div>
                                         <div class="overview-chart">
-                                            <canvas id="widgetChart1"></canvas>
+                                            <!-- <canvas id="widgetChart1"></canvas> -->
                                         </div>
                                     </div>
                                 </div>
@@ -348,7 +353,7 @@
                                             </div>
                                         </div>
                                         <div class="recent-report__chart">
-                                            <canvas id="recent-rep-chart"></canvas>
+                                    <!--        <canvas id="recent-rep-chart"></canvas> -->
                                         </div>
                                     </div>
                                 </div>
@@ -372,7 +377,7 @@
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="percent-chart">
-                                                    <canvas id="percent-chart"></canvas>
+                                               <!--     <canvas id="percent-chart"></canvas> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -385,95 +390,35 @@
                                     <table class="table table-borderless table-data3">
                                         <thead>
                                             <tr>
-                                                <th>Date</th>
-                                                <th>Sender Name</th>
-                                                <th>Transaction ID</th>
-                                                <th>Status</th>
-                                                <th>Amount</th>
-                                                <th>Check Fraud</th>
+                                                <th>Gender</th>
+                                                <th>Married</th>
+                                                <th>Dependents</th>
+                                                <th>Self_Employed</th>
+                                                <th>ApplicantIncome</th>
+                                                <th>Coapplicant_Income</th>
+                                                <th>Loan_Amount</th>
+                                                <th>Loan_Amount_Term</th>
+                                                <th>CreditHistory</th>
+                                                <th>Property_Area</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                              <% if(fraud){
+                                                fraud.forEach(function(fraud){ %>
+                                           
                                             <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>sender 1</td>
-                                                <td>232323</td>
-                                                <td class="denied">waiting</td>
-                                                <td>$999.00</td>
-                                                <td class="cell100 column8"><label class="checkbox">
-                                                                                 <input type="checkbox"  >
-                                                                                  </label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-28 01:22</td>
-                                                <td>sender 2</td>
-                                                <td>676783/td>
-                                                <td class="denied">waiting</td>
-                                                <td>$756.00</td>
-                                                <td class="cell100 column8"><label class="checkbox">
-                                                                                 <input type="checkbox" />
-                                                                                  </label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-27 02:12</td>
-                                                <td>sender 3</td>
-                                                <td>787654</td>
-                                                <td class="denied">waiting</td>
-                                                <td>$22.00</td>
-                                                <td class="cell100 column8"><label class="checkbox">
-                                                                                 <input type="checkbox" />
-                                                                                  </label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-26 23:06</td>
-                                                <td>sender 4</td>
-                                                <td>675645</td>
-                                                <td class="denied">waiting</td>
-                                                <td>$1199.00</td>
-                                                <td class="cell100 column8"><label class="checkbox">
-                                                                                 <input type="checkbox" />
-                                                                                  </label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-25 19:03</td>
-                                                <td>sender 5</td>
-                                                <td>765456</td>
-                                                <td class="process">collected</td>
-                                                <td>$10.00</td>
-                                                <td class="cell100 column8"><label class="checkbox">
-                                                                                 <input type="checkbox" />
-                                                                                  </label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>sender 6</td>
-                                                <td>875876</td>
-                                                <td class="denied">waiting</td>
-                                                <td>$199.00</td>
-                                                <td class="cell100 column8"><label class="checkbox">
-                                                                                 <input type="checkbox" />
-                                                                                  </label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-24 19:10</td>
-                                                <td>sender 7</td>
-                                                <td>456435</td>
-                                                <td class="process">collected</td>
-                                                <td>$699.00</td>
-                                                <td class="cell100 column8"><label class="checkbox">
-                                                                                 <input type="checkbox" />
-                                                                                  </label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-22 00:43</td>
-                                                <td>sender 8</td>
-                                                <td>437634</td>
-                                                <td class="denied">waiting</td>
-                                                <td>$10.00</td>
-                                                <td class="cell100 column8"><label class="checkbox">
-                                                                                 <input type="checkbox" />
-                                                                                  </label></td>
-                                            </tr>
+                                                <td><%= fraud.Gender %></td>
+                                                <td><%= fraud.Married %></td>
+                                                <td><%= fraud.Dependents %></td>
+                                                <td><%= fraud.Self_Employed %></td>
+                                                <td><%= fraud.ApplicantIncome %></td>
+                                                <td><%= fraud.Coapplicant_Income %></td>
+                                                <td><%= fraud.Loan_Amount %></td>
+                                                <td><%= fraud.Loan_Amount_Term %></td>
+                                                <td><%= fraud.CreditHistory %></td>
+                                                <td><%= fraud.Property_Area %></td>    
+                                            </tr>                                                     
+                                                      <% }) }%>
                                         </tbody>
                                     </table>
                                 </div>
@@ -482,8 +427,10 @@
                                 <!-- RECENT REPORT 2-->
                                 <div class="chart-percent-2" style="width: 480px; margin-right: 0px">
                                 <h3 class="title-3 m-b-30" style="font-weight: bold; text-decoration: underline;">PERCENTAGE CHART %</h3>
-                                <div class="chart-wrap">
-                                    <canvas id="percent-chart2"></canvas>
+
+
+                              <div class="chart-wrap">
+                                  <!--  <canvas id="percent-chart2"></canvas> -->
                                     <div id="chartjs-tooltip">
                                         <table></table>
                                     </div>
@@ -497,7 +444,7 @@
                                         <span class="dot dot--red"></span>
                                         <span>Fraud</span>
                                     </div>
-                                </div>
+                                </div> 
                             </div>
                                 <!-- END RECENT REPORT 2             -->
                             </div>

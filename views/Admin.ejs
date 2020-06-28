@@ -66,7 +66,7 @@
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
-                            <a href="Table">
+                            <a href="#">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                  <!--       <li>
@@ -79,10 +79,10 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="index">Login</a>
+                                    <a href="#">Login</a>
                                 </li>
                                 <li>
-                                    <a href="register">Register</a>
+                                    <a href="#">Register</a>
                                 </li>
                            <!--     <li>
                                     <a href="#l#">Forget Password</a>
@@ -109,7 +109,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="Admin">
+                            <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                          
                         </li>
@@ -118,7 +118,7 @@
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
-                            <a href="Table">
+                            <a href="#">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                     <!--    <li>
@@ -131,10 +131,10 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="index">Login</a>
+                                    <a href="#">Login</a>
                                 </li>
                                 <li>
-                                    <a href="register">Register</a>
+                                    <a href="#">Register</a>
                                 </li>
                         <!--        <li>
                                     <a href="#">Forget Password</a>
@@ -176,7 +176,7 @@
                                             <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">umair ahmed</a>
+                                            <a class="js-acc-btn" href="#"><% if(Username){%> <%=Username%> <%} %></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -187,9 +187,9 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">umair ahmed</a>
+                                                        <a href="#"><% if(Username){%> <%=Username%> <%} %></a>
                                                     </h5>
-                                                    <span class="email">umairahmed1@gmail.com</span>
+                                                    <span class="email"><% if(Email){%> <%=Email%> <%} %></span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
@@ -207,8 +207,13 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
+                                                <form action="/logout" method="get" accept-charset="utf-8">
+                                                
+                                                <input type="hidden" name="username" value="<%if(Username){%> <%=Username%><%} %>">
+                                                <input type="hidden" name="email" value="<%if(Email){%> <%=Email%><%} %>">
                                                 <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                    <i class="zmdi zmdi-power"></i><input type="submit" value="Logout"></a>
+                                              </form>
                                             </div>
                                         </div>
                                     </div>
@@ -341,7 +346,7 @@
                                             </div>
                                         </div>
                                         <div class="recent-report__chart" >
-                                            <canvas id="recent-rep-chart"></canvas>
+                                          <!--  <canvas id="recent-rep-chart"></canvas> -->
                                         </div>
                                     </div>
                                 </div>
@@ -368,7 +373,7 @@
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="percent-chart" style="margin-bottom: 45px">
-                                                    <canvas id="percent-chart"></canvas>
+                                             <!--       <canvas id="percent-chart"></canvas> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -382,86 +387,54 @@
                                 <div class="table-responsive table--no-card m-b-40">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Transaction ID</th>
-                                                <th>Sender Name</th>
-                                                <th class="text-right">Transaction</th>
-                                                
-                                                <th class="text-right">Total</th>
+                                               <tr>
+                                                <th>Gender</th>
+                                                <th>Married</th>
+                                                <th>Dependents</th>
+                                                <th>Self_Employed</th>
+                                                <th>ApplicantIncome</th>
+                                                <th>Coapplicant_Income</th>
+                                                <th>Loan_Amount</th>
+                                                <th>Loan_Amount_Term</th>
+                                                <th>CreditHistory</th>
+                                                <th>Property_Area</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>100398</td>
-                                                <td>sender 1</td>
-                                                <td class="text-right">$999.00</td>
-                                               
-                                                <td class="text-right">$999.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-28 01:22</td>
-                                                <td>100397</td>
-                                                <td>sender 2</td>
-                                                <td class="text-right">$756.00</td>
-                                              
-                                                <td class="text-right">$756.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-27 02:12</td>
-                                                <td>100396</td>
-                                                <td>sender 3</td>
-                                                <td class="text-right">$22.00</td>
-                                             
-                                                <td class="text-right">$44.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-26 23:06</td>
-                                                <td>100395</td>
-                                                <td>sender 4</td>
-                                                <td class="text-right">$1199.00</td>
-                                               
-                                                <td class="text-right">$1199.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-25 19:03</td>
-                                                <td>100393</td>
-                                                <td>sender 5</td>
-                                                <td class="text-right">$10.00</td>
-                                          
-                                                <td class="text-right">$30.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>100392</td>
-                                                <td>Sender 6</td>
-                                                <td class="text-right">$199.00</td>
+                                            <% if(fraud){
+                                                fraud.forEach(function(fraud){ %>
                                            
-                                                <td class="text-right">$1494.00</td>
-                                            </tr>
                                             <tr>
-                                                <td>2018-09-24 19:10</td>
-                                                <td>100391</td>
-                                                <td>sender 7</td>
-                                                <td class="text-right">$699.00</td>
-                                               
-                                                <td class="text-right">$699.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-22 00:43</td>
-                                                <td>100393</td>
-                                                <td>sender 8</td>
-                                                <td class="text-right">$10.00</td>
-                                              
-                                                <td class="text-right">$30.00</td>
-                                            </tr>
+                                                <td><%= fraud.Gender %></td>
+                                                <td><%= fraud.Married %></td>
+                                                <td><%= fraud.Dependents %></td>
+                                                <td><%= fraud.Self_Employed %></td>
+                                                <td><%= fraud.ApplicantIncome %></td>
+                                                <td><%= fraud.Coapplicant_Income %></td>
+                                                <td><%= fraud.Loan_Amount %></td>
+                                                <td><%= fraud.Loan_Amount_Term %></td>
+                                                <td><%= fraud.CreditHistory %></td>
+                                                <td><%= fraud.Property_Area %></td>    
+                                            </tr>                                                     
+                                                      <% }) }%>
+                                          
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                             <div class="col-lg-3" >
-                                <h2 class="title-1 m-b-25" style="font-weight: bold; text-decoration: underline;">FRAUDS <a href="Table" style="font-size: 12px">&nbsp;&nbsp;&nbsp;View Details</a></h2>
+                                <h2 class="title-1 m-b-25" style="font-weight: bold; text-decoration: underline;">FRAUDS 
+                                   
+                                    <a href="#" style="font-size: 12px">&nbsp;&nbsp;&nbsp;
+                                        <form action="/Table" method="get" accept-charset="utf-8">
+                                                
+                                                <input type="hidden" name="username" value="<%if(Username){%> <%=Username%><%} %>">
+                                                <input type="hidden" name="email" value="<%if(Email){%> <%=Email%><%} %>">
+                                                <input type="submit" value="View Details">
+                                              </form>
+                                    </a>
+
+                                </h2>
                                 <div class="au-card au-card--bg-blue au-card-top-countries m-b-40" >
                                     <div class="au-card-inner" >
                                         <div class="table-responsive">
@@ -479,24 +452,7 @@
                                                         
 
                                                     </tr>
-                                                    <tr>
-                                                        <td>Sender2</td>
-                                                        <td class="text-right">$46,399.22</td>
-                                                         <td>Receiver2</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Sender3</td>
-                                                        <td class="text-right">$35,364.90</td> <td>Receiver3</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Sender4</td>
-                                                        <td class="text-right">$20,366.96</td> <td>Receiver4</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Sender5</td>
-                                                        <td class="text-right">$10,366.96</td> <td>Receiver5</td>
-
-                                                    </tr>
+                                                    
                                                      
                                                 
                                                     
@@ -514,7 +470,7 @@
                                 <div class="chart-percent-2" style="width: 480px; margin-right: 0px">
                                 <h3 class="title-3 m-b-30" style="font-weight: bold; text-decoration: underline; ">FRADULENT PAYMENT'S CHART </h3>
                                 <div class="chart-wrap">
-                                    <canvas id="percent-chart2"></canvas>
+                               <!--     <canvas id="percent-chart2"></canvas> -->
                                     <div id="chartjs-tooltip">
                                         <table></table>
                                     </div>

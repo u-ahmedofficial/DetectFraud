@@ -56,8 +56,15 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
-                            <a class="js-arrow" href="index">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            
+
+                                <form action="/admin" method="get" accept-charset="utf-8">
+                                                
+                                                <input type="hidden" name="username" value="<%if(Username){%> <%=Username%><%} %>">
+                                                <input type="hidden" name="email" value="<%if(Email){%> <%=Email%><%} %>">
+                                                <!-- <a class="js-arrow" href="#">    -->                                          
+
+                                <i class="fas fa-tachometer-alt"><input type="submit" value="Dashboard"></i><!-- </a> --></form>
                            
                         </li>
                         <li>
@@ -78,10 +85,10 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="index">Login</a>
+                                    <a href="#">Login</a>
                                 </li>
                                 <li>
-                                    <a href="register">Register</a>
+                                    <a href="#">Register</a>
                                 </li>
                            <!--     <li>
                                     <a href="#">Forget Password</a>
@@ -108,8 +115,14 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="has-sub">
-                            <a class="js-arrow" href="Admin">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+
+                             <form action="/admin" method="get" accept-charset="utf-8">
+                                                
+                                                <input type="hidden" name="username" value="<%if(Username){%> <%=Username%><%} %>">
+                                                <input type="hidden" name="email" value="<%if(Email){%> <%=Email%><%} %>">
+
+                            <<!-- a class="js-arrow" href="#"> -->
+                                <i class="fas fa-tachometer-alt"><input type="submit" value="Dashboard"></i><!-- </a> --></form>
                           
                         </li>
                         <li>
@@ -117,7 +130,7 @@
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li class="active">
-                            <a href="Table">
+                            <a href="#">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                      <!--   <li>
@@ -130,10 +143,10 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="index">Login</a>
+                                    <a href="#">Login</a>
                                 </li>
                                 <li>
-                                    <a href="register">Register</a>
+                                    <a href="#">Register</a>
                                 </li>
                              <!--   <li>
                                     <a href="#">Forget Password</a>
@@ -186,9 +199,9 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">umair ahmed</a>
+                                                        <a href="#"><% if(Username){%> <%=Username%> <%} %></a>
                                                     </h5>
-                                                    <span class="email">umairahmed1@gmail.com</span>
+                                                    <span class="email"><% if(Email){%> <%=Email%> <%} %></span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
@@ -206,8 +219,13 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
+                                                 <form action="/logout" method="get" accept-charset="utf-8">
+                                                
+                                                <input type="hidden" name="username" value="<%if(Username){%> <%=Username%><%} %>">
+                                                <input type="hidden" name="email" value="<%if(Email){%> <%=Email%><%} %>">
                                                 <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                    <i class="zmdi zmdi-power"></i><input type="submit" value="Logout"></a>
+                                              </form>
                                             </div>
                                         </div>
                                     </div>
@@ -230,465 +248,52 @@
                                     <table class="table table-borderless table-data3">
                                         <thead>
                                             <tr style="background-color: red">
-                                                <th>Date</th>
-                                                <th>Sender Name</th>
-                                                <th>Receiver Name</th>
-                                                <th>Transaction ID</th>
-                                                <th>Amount</th>
-                                                <th>View Details</th>
-                                                <th>Mark Status</th>
+                                                <th>Gender</th>
+                                                <th>Married</th>
+                                                <th>Dependents</th>
+                                                <th>Self_Employed</th>
+                                                <th>ApplicantIncome</th>
+                                                <th>Coapplicant_Income</th>
+                                                <th>Loan_Amount</th>
+                                                <th>Loan_Amount_Term</th>
+                                                <th>CreditHistory</th>
+                                                <th>Property_Area</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                           <% if(fraud){
+                                                fraud.forEach(function(fraud){ %>
+                                           
                                             <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>sender 1</td>
-                                                <td>receiver 1</td>
-                                                <td>232323</td>
-                                                 <td>$999.00</td>
-                                              <td>
-                                                     <a href="#"> <i class="zmdi zmdi-more"></i><i class="zmdi zmdi-more"></i></a>
-                                                 </td>
-                                               
-                                                <td>
-                                              
-                                               <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                               
-                                                                <option value="" style="color: red">Fraud</option>
-                                                                <option value="" style="color: green">Orignal</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-28 01:22</td>
-                                                <td>sender 2</td>
-                                                 <td>receiver 2</td>
-                                                <td>676783</td>
-                                                  <td>$756.00</td>
-                                                <td>
-                                                     <a href="#"> <i class="zmdi zmdi-more"></i><i class="zmdi zmdi-more"></i></a>
-                                                 </td>
-                                                 <td>
-                                              
-                                               <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                               
-                                                               <option value="" style="color: red">Fraud</option>
-                                                                <option value="" style="color: green">Orignal</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
+                                                <td><%= fraud.Gender %></td>
+                                                <td><%= fraud.Married %></td>
+                                                <td><%= fraud.Dependents %></td>
+                                                <td><%= fraud.Self_Employed %></td>
+                                                <td><%= fraud.ApplicantIncome %></td>
+                                                <td><%= fraud.Coapplicant_Income %></td>
+                                                <td><%= fraud.Loan_Amount %></td>
+                                                <td><%= fraud.Loan_Amount_Term %></td>
+                                                <td><%= fraud.CreditHistory %></td>
+                                                <td><%= fraud.Property_Area %></td> 
+                                                 <td><form action="/approve" method="get" accept-charset="utf-8">
+                                                    <input type="hidden" name="ApplicantIncome" value="<%=fraud.ApplicantIncome%>">
+                                                    <input type="hidden" name="ApplicantIncome" value="<%=fraud.Coapplicant_Income%>">
+                                                    <input type="hidden" name="email" value="<%=Email%>">
+                                                    <input type="hidden" name="username" value="<%=Username%>">
+                                                    <input type="hidden" name="fraud" value="<%=fraud%>">
+                                                    <input type="submit" value="Approve">
+                                                    </form>
+                                                </td>   
+                                                </tr>                                                     
+                                                      <% }) }%>
 
-                                                                              
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-27 02:12</td>
-                                                <td>sender 3</td>
-                                                 <td>receiver 3</td>
-                                                <td>787654</td>
-                                                <td>$22.00</td>
-                                                <td>
-                                                     <a href="#"> <i class="zmdi zmdi-more"></i><i class="zmdi zmdi-more"></i></a>
-                                                 </td>
-                                                
-                                                 <td>
-                                              
-                                               <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                               
-                                                                <option value="" style="color: red">Fraud</option>
-                                                                <option value="" style="color: green">Orignal</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-26 23:06</td>
-                                                <td>sender 4</td>
-                                                      <td>receiver 4</td>
-                                                <td>675645</td>
-                                                 <td>$1199.00</td>
-                                                <td>
-                                                     <a href="#"> <i class="zmdi zmdi-more"><i class="zmdi zmdi-more"></i></i></a>
-                                                 </td>
-                                               
-                                                 <td>
-                                              
-                                               <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                               
-                                                                <option value="" style="color: red">Fraud</option>
-                                                                <option value="" style="color: green">Orignal</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-25 19:03</td>
-                                                <td>sender 5</td>
-                                                 <td>receiver 5</td>
-                                                <td>765456</td>
-                                                 <td>$10.00</td>
-                                                 <td>
-                                                     <a href="#"> <i class="zmdi zmdi-more"></i><i class="zmdi zmdi-more"></i></a>
-                                                 </td>
-                                               
-                                                <td>
-                                              
-                                               <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                               
-                                                               <option value="" style="color: red">Fraud</option>
-                                                                <option value="" style="color: green">Orignal</option>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>sender 6</td>
-                                                 <td>receiver 6</td>
-                                                <td>875876</td>
-                                                  <td>$199.00</td>
-                                                 <td>
-                                                     <a href="#"> <i class="zmdi zmdi-more"></i><i class="zmdi zmdi-more"></i></a>
-                                                 </td>
-                                              
-                                              <td>
-                                              
-                                               <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                               
-                                                                <option value="" style="color: red">Fraud</option>
-                                                                <option value="" style="color: green">Orignal</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                            <tr>
-                                                <td>2018-09-24 19:10</td>
-                                                <td>sender 7</td>
-                                                 <td>receiver 7</td>
-                                                <td>456435</td>
-                                                 <td>$699.00</td>
-                                                <td>
-                                                     <a href="#"> <i class="zmdi zmdi-more"></i><i class="zmdi zmdi-more"></i></a>
-                                                 </td>
-                                               
-                                          <td>
-                                              
-                                               <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                               
-                                                                <option value="" style="color: red">Fraud</option>
-                                                                <option value="" style="color: green">Orignal</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-22 00:43</td>
-                                                <td>sender 8</td>
-                                                 <td>receiver 8</td>
-                                                <td>437634</td>
-                                                 <td>$10.00</td>
-                                                 <td>
-                                                     <a href="#"> <i class="zmdi zmdi-more"></i><i class="zmdi zmdi-more"></i></a>
-                                                 </td>
-                                               
-                                                 <td>
-                                              
-                                               <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                               
-                                                               <option value="" style="color: red">Fraud</option>
-                                                                <option value="" style="color: green">Orignal</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <!-- DATA TABLE -->
-                                <h3 class="title-5 m-b-35" style="font-weight: bold; text-decoration: underline;">DATA TABLE</h3>
-                                <div class="table-data__tool">
-                                    <div class="table-data__tool-left">
-                                        <div class="rs-select2--light rs-select2--md">
-                                            <select class="js-select2" name="property">
-                                                <option selected="selected">All Properties</option>
-                                                <option value="">Option 1</option>
-                                                <option value="">Option 2</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                        <div class="rs-select2--light rs-select2--sm">
-                                            <select class="js-select2" name="time">
-                                                <option selected="selected">Today</option>
-                                                <option value="">3 Days</option>
-                                                <option value="">1 Week</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                        <button class="au-btn-filter">
-                                            <i class="zmdi zmdi-filter-list"></i>Filters</button>
-                                    </div>
-                                    <div class="table-data__tool-right">
-                                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                            <i class="zmdi zmdi-plus"></i>Add item</button>
-                                        <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                                            <select class="js-select2" name="type">
-                                                <option selected="selected">Export</option>
-                                                <option value="">Option 1</option>
-                                                <option value="">Option 2</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="table-responsive table-responsive-data2">
-                                    <table class="table table-data2">
-                                        <thead>
-                                            <tr style="background-color: #00FFFF; color:black">
-                                                <th>Date</th>
-                                                <th>Sender ID</th>
-                                                <th>Sender name</th>
-                                                <th>Reciever ID</th>
-                                                <th>Receiver Name</th>
-                                                <th>Transaction ID</th>
-                                                <th>Amount</th>
-                                                <th>Edit</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="tr-shadow">
-                                               
-                                                <td>2018-09-29 05:57</td>
-                                                <td>
-                                                    <span class="block-email">454</span>
-                                                </td>
-                                                <td class="desc">Sender1</td>
-                                                <td> <span class="block-email">786</span></td>
-                                              
-                                                   <td class="desc">receiver 1</td>
-                                           
-                                                <td>123456</td>
-                                                <td>$679.00</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="spacer"></tr>
-                                            <tr class="tr-shadow">
-                                               
-                                                <td>2018-09-29 05:57</td>
-                                                <td>
-                                                    <span class="block-email">564</span>
-                                                </td>
-                                                <td class="desc">sender2</td>
-                                                <td> <span class="block-email">564</span></td>
-                                                   <td class="desc">receiver 2</td>
-                                                                                               <td>4534534</td>
-                                                <td>$232</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="spacer"></tr>
-                                            <tr class="tr-shadow">
-                                              
-                                                <td>2018-09-29 05:57</td>
-                                                <td>
-                                                    <span class="block-email">675</span>
-                                                </td>
-                                                <td class="desc">sender3</td>
-                                                <td> <span class="block-email">453</span></td>
-                                                
-                                                   <td class="desc">receiver 3</td>
-                                              
-                                                <td>125444</td>
-                                                <td>$63.00</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="spacer"></tr>
-                                            <tr class="tr-shadow">
-                                              
-                                                <td>2018-09-29 05:57</td>
-                                                <td>
-                                                    <span class="block-email">499</span>
-                                                </td>
-                                                <td class="desc">sender5</td>
-                                                <td> <span class="block-email">500</span></td>
-                                               
-                                                   <td class="desc">receiver 5</td>
-                                               
-                                               <td>234578</td>
-                                                <td>$123.00</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                                                        <tr class="spacer"></tr>
-                                            <tr class="tr-shadow">
-                                              
-                                                <td>2018-09-29 05:57</td>
-                                                <td>
-                                                    <span class="block-email">377</span>
-                                                </td>
-                                                <td class="desc">sender6</td>
-                                                <td> <span class="block-email">688</span></td>
-                                               
-                                                   <td class="desc">receiver 6</td>
-                                               
-                                               <td>342422</td>
-                                                <td>$656.00</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                                                        <tr class="spacer"></tr>
-                                            <tr class="tr-shadow">
-                                              
-                                                <td>2018-09-29 05:57</td>
-                                                <td>
-                                                    <span class="block-email">577</span>
-                                                </td>
-                                                <td class="desc">sender7</td>
-                                                <td> <span class="block-email">633</span></td>
-                                               
-                                                   <td class="desc">receiver 7</td>
-                                               
-                                               <td>234356</td>
-                                                <td>$511.00</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                                                        <tr class="spacer"></tr>
-                                            <tr class="tr-shadow">
-                                              
-                                                <td>2018-09-29 05:57</td>
-                                                <td>
-                                                    <span class="block-email">345</span>
-                                                </td>
-                                                <td class="desc">sender8</td>
-                                                <td> <span class="block-email">659</span></td>
-                                               
-                                                   <td class="desc">receiver 8</td>
-                                               
-                                               <td>242322</td>
-                                                <td>$711.00</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- END DATA TABLE -->
                             </div>
                         </div>
                         <div class="row m-t-30">
