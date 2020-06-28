@@ -491,6 +491,10 @@ app.get("/",(req,res)=>{
 	res.render('index');
 })
 
+app.get("/index",(req,res)=>{
+
+	res.render('index');
+})
 	ConfigureExpress(app);
 
 function ConfigureExpress(app)
