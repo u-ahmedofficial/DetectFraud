@@ -81,10 +81,10 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="#">Login</a>
+                                    <a href="index">Login</a>
                                 </li>
                                 <li>
-                                    <a href="#">Register</a>
+                                    <a href="register">Register</a>
                                 </li>
                       <!--          <li>
                                     <a href="#">Forget Password</a>
@@ -139,10 +139,10 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="#">Login</a>
+                                    <a href="index">Login</a>
                                 </li>
                                 <li>
-                                    <a href="#">Register</a>
+                                    <a href="register">Register</a>
                                 </li>
                          <!--       <li>
                                     <a href="#">Forget Password</a>
@@ -195,7 +195,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#"><% if(Username){%> <%=Username%> <%} %></a>
+                                                        <a href="#">Umair Ahmed</a>
                                                     </h5>
                                                     <span class="email"><% if(Email){%> <%=Email%> <%} %></span>
                                                 </div>
@@ -215,11 +215,10 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                               <form action="/logout" method="get" accept-charset="utf-8">
+                                            <form action="/logout" method="get" accept-charset="utf-8">
                                                 
-                                                <input type="hidden" name="username" value="<%if(Username){%> <%=Username%><%} %>">
-                                                <input type="hidden" name="email" value="<%if(Email){%> <%=Email%><%} %>">
-                                                <a href="#">
+                                                <input type="hidden" name="Username" value="<%=">
+                                                <a href="/logout">
                                                     <i class="zmdi zmdi-power"></i><input type="submit" value="Logout"></a>
                                               </form>
                                             </div>
@@ -253,12 +252,12 @@
 
                                             </div>
                                             <div class="text">
-                                                <h2><%=malePercent%>%</h2>
-                                                <span>MALE LOAN%</span>
+                                                <h2>90%</h2>
+                                                <span>Primary Card</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
-                                            <canvas id="widgetChart1"></canvas>
+                                            <!-- <canvas id="widgetChart1"></canvas> -->
                                         </div>
                                     </div>
                                 </div>
@@ -273,8 +272,8 @@
 
                                             </div>
                                             <div class="text">
-                                                <h2><%=femalePercent%>%</h2>
-                                                <span>FEMALE LOAN%</span>
+                                                <h2>50%</h2>
+                                                <span>Success</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
@@ -293,8 +292,8 @@
 
                                             </div>
                                             <div class="text">
-                                                <h2><%=marriedPercent%>%</h2>
-                                                <span>MARRIED LOAN%</span>
+                                                <h2>20%</h2>
+                                                <span>Danger</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
@@ -312,8 +311,8 @@
 
                                             </div>
                                             <div class="text">
-                                                <h2><%=unmarriedPercent%>%</h2>
-                                                <span>UNMARRIED LOAN%</span>
+                                                <h2>30%</h2>
+                                                <span>Warnings</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
@@ -325,33 +324,63 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="au-card recent-report" style="height: 600px">
-                                    
-                                </style>
+                                <div class="au-card recent-report">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2"style="font-weight: bold; text-decoration: underline;">GRADUATE VS UNDERGRAD FRAUD</h3>
-                                      
-                                        <img src="barGraduate.png" alt="FraudGraduate" height="500" width="1050">
+                                        <h3 class="title-2"style="font-weight: bold; text-decoration: underline;">RECENT REPORTS</h3>
+                                        <div class="chart-info">
+                                            <div class="chart-info__left">
+                                                <div class="chart-note">
+                                                    <span class="dot dot--blue"></span>
+                                                    <span>Sent Payments</span>
+                                                </div>
+                                                <div class="chart-note mr-0">
+                                                    <span class="dot dot--green"></span>
+                                                    <span>Received Payments</span>
+                                                </div>
+                                            </div>
+                                            <div class="chart-info__right">
+                                                <div class="chart-statis">
+                                                    <span class="index incre">
+                                                        <i class="zmdi zmdi-long-arrow-up"></i>60%</span>
+                                                    <span class="label">received</span>
+                                                </div>
+                                                <div class="chart-statis mr-0">
+                                                    <span class="index decre">
+                                                        <i class="zmdi zmdi-long-arrow-down"></i>40%</span>
+                                                    <span class="label">sent</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recent-report__chart">
+                                            <canvas id="recent-rep-chart"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="au-card chart-percent-card" style="height: 600px">
-      
-                                        <h3 class="title-2 tm-b-5" style="font-weight: bold; text-decoration: underline;">FRAUD PERCENTAGE %</h3>
-                                        <br>
-                                           <div style="height: 400px">
-                                            <img src="pieFraud.png" alt="FraudStats" height="800" width="1050">
-                                        </div>
+                                <div class="au-card chart-percent-card" style="height: 505px">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 tm-b-5" style="font-weight: bold; text-decoration: underline;">PERCENTAGE CHART %</h3>
+                                        <div class="row no-gutters">
                                             <div class="col-xl-6">
-
-                                                <div class="percent-chart">
-                                              
-                                               <!--     <canvas id="percent-chart"></canvas> -->
+                                                <div class="chart-note-wrap">
+                                                    <div class="chart-note mr-0 d-block">
+                                                        <span class="dot dot--blue"></span>
+                                                        <span>Received</span>
+                                                    </div>
+                                                    <div class="chart-note mr-0 d-block">
+                                                        <span class="dot dot--red"></span>
+                                                        <span>Sent</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                       
-                                   
+                                            <div class="col-xl-6">
+                                                <div class="percent-chart">
+                                                    <canvas id="percent-chart"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -360,48 +389,161 @@
                                     <table class="table table-borderless table-data3">
                                         <thead>
                                             <tr>
-                                                <th>Gender</th>
-                                                <th>Married</th>
-                                                <th>Dependents</th>
-                                                <th>Self_Employed</th>
-                                                <th>ApplicantIncome</th>
-                                                <th>Coapplicant_Income</th>
-                                                <th>Loan_Amount</th>
-                                                <th>Loan_Amount_Term</th>
-                                                <th>CreditHistory</th>
-                                                <th>Property_Area</th>
+                                                <th>Date</th>
+                                                <th>Sender Name</th>
+                                                <th>Transaction ID</th>
+                                                <th>Status</th>
+                                                <th>Amount</th>
+                                                <th>Check Fraud</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                              <% if(fraud){
-                                                fraud.forEach(function(fraud){ %>
-                                           
                                             <tr>
-                                                <td><%= fraud.Gender %></td>
-                                                <td><%= fraud.Married %></td>
-                                                <td><%= fraud.Dependents %></td>
-                                                <td><%= fraud.Self_Employed %></td>
-                                                <td>$<%= fraud.ApplicantIncome %></td>
-                                                <td>$<%= fraud.Coapplicant_Income %></td>
-                                                <td>$<%= fraud.LoanAmount %></td>
-                                                <td><%= fraud.Loan_Amount_Term %> Days</td>
-                                                <td><%= fraud.CreditHistory %></td>
-                                                <td><%= fraud.Property_Area %></td>    
-                                            </tr>                                                     
-                                                      <% }) }%>
+                                                <td>2018-09-29 05:57</td>
+                                                <td>sender 1</td>
+                                                <td>232323</td>
+                                                <td class="denied">waiting</td>
+                                                <td>$999.00</td>
+                                                <td class="cell100 column8"><label class="checkbox">
+                                                                                 <input type="checkbox"  >
+                                                                                  </label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-28 01:22</td>
+                                                <td>sender 2</td>
+                                                <td>676783/td>
+                                                <td class="denied">waiting</td>
+                                                <td>$756.00</td>
+                                                <td class="cell100 column8"><label class="checkbox">
+                                                                                 <input type="checkbox" />
+                                                                                  </label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-27 02:12</td>
+                                                <td>sender 3</td>
+                                                <td>787654</td>
+                                                <td class="denied">waiting</td>
+                                                <td>$22.00</td>
+                                                <td class="cell100 column8"><label class="checkbox">
+                                                                                 <input type="checkbox" />
+                                                                                  </label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-26 23:06</td>
+                                                <td>sender 4</td>
+                                                <td>675645</td>
+                                                <td class="denied">waiting</td>
+                                                <td>$1199.00</td>
+                                                <td class="cell100 column8"><label class="checkbox">
+                                                                                 <input type="checkbox" />
+                                                                                  </label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-25 19:03</td>
+                                                <td>sender 5</td>
+                                                <td>765456</td>
+                                                <td class="process">collected</td>
+                                                <td>$10.00</td>
+                                                <td class="cell100 column8"><label class="checkbox">
+                                                                                 <input type="checkbox" />
+                                                                                  </label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-29 05:57</td>
+                                                <td>sender 6</td>
+                                                <td>875876</td>
+                                                <td class="denied">waiting</td>
+                                                <td>$199.00</td>
+                                                <td class="cell100 column8"><label class="checkbox">
+                                                                                 <input type="checkbox" />
+                                                                                  </label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-24 19:10</td>
+                                                <td>sender 7</td>
+                                                <td>456435</td>
+                                                <td class="process">collected</td>
+                                                <td>$699.00</td>
+                                                <td class="cell100 column8"><label class="checkbox">
+                                                                                 <input type="checkbox" />
+                                                                                  </label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-22 00:43</td>
+                                                <td>sender 8</td>
+                                                <td>437634</td>
+                                                <td class="denied">waiting</td>
+                                                <td>$10.00</td>
+                                                <td class="cell100 column8"><label class="checkbox">
+                                                                                 <input type="checkbox" />
+                                                                                  </label></td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
                          <div class="row">
                             <div class="col-xl-8">
                                 <!-- RECENT REPORT 2-->
-                               
-                                  <!--  <canvas id="percent-chart2"></canvas> -->
-                                    
+                                <div class="chart-percent-2" style="width: 480px; margin-right: 0px">
+                                <h3 class="title-3 m-b-30" style="font-weight: bold; text-decoration: underline;">PERCENTAGE CHART %</h3>
+                                <div class="chart-wrap">
+                                    <canvas id="percent-chart2"></canvas>
+                                    <div id="chartjs-tooltip">
+                                        <table></table>
+                                    </div>
+                                </div>
+                                <div class="chart-info">
+                                    <div class="chart-note">
+                                        <span class="dot dot--blue"></span>
+                                        <span>successful</span>
+                                    </div>
+                                    <div class="chart-note">
+                                        <span class="dot dot--red"></span>
+                                        <span>Fraud</span>
+                                    </div>
+                                </div>
+                            </div>
                                 <!-- END RECENT REPORT 2             -->
                             </div>
                             <div class="col-xl-4">
-                                
+                                <!-- TASK PROGRESS-->
+                                <div class="task-progress" style="width: 450px; height: 435px; float: right; margin-left: 30px ">
+                                    <h3 class="title-3" style="font-weight: bold; text-decoration: underline;">TRANSACTIONAL DETAILS</h3>
+                                    <div class="au-skill-container">
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">Transactions</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="90">
+                                                    <span class="au-progress__value js-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">Successful</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="70">
+                                                    <span class="au-progress__value js-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">Frauds</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="30">
+                                                    <span class="au-progress__value js-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">Warnings</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="40">
+                                                    <span class="au-progress__value js-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- END TASK PROGRESS-->
                             </div>
                         </div>

@@ -66,7 +66,7 @@
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="Table">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                  <!--       <li>
@@ -79,10 +79,10 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="#">Login</a>
+                                    <a href="index">Login</a>
                                 </li>
                                 <li>
-                                    <a href="#">Register</a>
+                                    <a href="register">Register</a>
                                 </li>
                            <!--     <li>
                                     <a href="#l#">Forget Password</a>
@@ -109,7 +109,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="Admin">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                          
                         </li>
@@ -118,7 +118,7 @@
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="Table">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                     <!--    <li>
@@ -131,10 +131,10 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="#">Login</a>
+                                    <a href="index">Login</a>
                                 </li>
                                 <li>
-                                    <a href="#">Register</a>
+                                    <a href="register">Register</a>
                                 </li>
                         <!--        <li>
                                     <a href="#">Forget Password</a>
@@ -176,7 +176,7 @@
                                             <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#"><% if(Username){%> <%=Username%> <%} %></a>
+                                            <a class="js-acc-btn" href="#">umair ahmed</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -187,9 +187,9 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#"><% if(Username){%> <%=Username%> <%} %></a>
+                                                        <a href="#">umair ahmed</a>
                                                     </h5>
-                                                    <span class="email"><% if(Email){%> <%=Email%> <%} %></span>
+                                                    <span class="email">umairahmed1@gmail.com</span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
@@ -207,13 +207,8 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <form action="/logout" method="get" accept-charset="utf-8">
-                                                
-                                                <input type="hidden" name="username" value="<%if(Username){%> <%=Username%><%} %>">
-                                                <input type="hidden" name="email" value="<%if(Email){%> <%=Email%><%} %>">
                                                 <a href="#">
-                                                    <i class="zmdi zmdi-power"></i><input type="submit" value="Logout"></a>
-                                              </form>
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
                                     </div>
@@ -245,8 +240,8 @@
 
                                             </div>
                                             <div class="text">
-                                                <h2><%=malePercent%>%</h2>
-                                                <span>MALE LOAN%</span>
+                                                <h2>90%</h2>
+                                                <span>primary card</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
@@ -265,8 +260,8 @@
 
                                             </div>
                                             <div class="text">
-                                                <h2><%=femalePercent%>%</h2>
-                                                <span>FEMALE LOAN%</span>
+                                                <h2>50%</h2>
+                                                <span>success</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
@@ -285,8 +280,8 @@
 
                                             </div>
                                             <div class="text">
-                                                <h2><%=marriedPercent%>%</h2>
-                                                <span>MARRIED LOAN%</span>
+                                                <h2>20%</h2>
+                                                <span>danger</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
@@ -304,8 +299,8 @@
 
                                             </div>
                                             <div class="text">
-                                                <h2><%=unmarriedPercent%>%</h2>
-                                                <span>UNMARRIED LOAN%</span>
+                                                <h2>30%</h2>
+                                                <span>warnings</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
@@ -320,8 +315,34 @@
                             <div class="col-lg-6">
                                 <div class="au-card recent-report">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2" style="font-weight: bold; text-decoration: underline;">GRADUATE VS UNDERGRAD FRAUD</h3>
-                                       <img src="barGraduate.png" alt="FraudStats" height="700" width="1050">
+                                        <h3 class="title-2" style="font-weight: bold; text-decoration: underline;">RECENT REPORTS</h3>
+                                        <div class="chart-info">
+                                            <div class="chart-info__left" >
+                                                <div class="chart-note">
+                                                    <span class="dot dot--blue"></span>
+                                                    <span>Sent Payments</span>
+                                                </div>
+                                                <div class="chart-note mr-0">
+                                                    <span class="dot dot--green"></span>
+                                                    <span>Received Payments</span>
+                                                </div>
+                                            </div>
+                                            <div class="chart-info__right">
+                                                <div class="chart-statis">
+                                                    <span class="index incre">
+                                                        <i class="zmdi zmdi-long-arrow-up"></i>60%</span>
+                                                    <span class="label">received</span>
+                                                </div>
+                                                <div class="chart-statis mr-0">
+                                                    <span class="index decre">
+                                                        <i class="zmdi zmdi-long-arrow-down"></i>40%</span>
+                                                    <span class="label">sent</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recent-report__chart" >
+                                            <canvas id="recent-rep-chart"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -329,14 +350,25 @@
 
 
                             <div class="col-lg-6">
-                                <div class="au-card chart-percent-card" style="height: 600px">
+                                <div class="au-card chart-percent-card">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2 tm-b-5" style="font-weight: bold; text-decoration: underline;">FRAUD PERCENTAGE %</h3><br>
-                                                <img src="pieFraud.png" alt="FraudStats" height="700" width="1050">
-
-                                                 <div class="col-xl-6">
+                                        <h3 class="title-2 tm-b-5" style="font-weight: bold; text-decoration: underline;">CHART BY PERCENTAGE %</h3>
+                                        <div class="row no-gutters">
+                                            <div class="col-xl-6">
+                                                <div class="chart-note-wrap">
+                                                    <div class="chart-note mr-0 d-block">
+                                                        <span class="dot dot--blue"></span>
+                                                        <span>Received Payments</span>
+                                                    </div>
+                                                    <div class="chart-note mr-0 d-block">
+                                                        <span class="dot dot--red"></span>
+                                                        <span>Sent Payments</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
                                                 <div class="percent-chart" style="margin-bottom: 45px">
-                                             <!--       <canvas id="percent-chart"></canvas> -->
+                                                    <canvas id="percent-chart"></canvas>
                                                 </div>
                                             </div>
                                         </div>
@@ -350,93 +382,126 @@
                                 <div class="table-responsive table--no-card m-b-40">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
-                                               <tr>
-                                                <th>Gender</th>
-                                                <th>Married</th>
-                                                <th>Dependents</th>
-                                                <th>Self_Employed</th>
-                                                <th>ApplicantIncome</th>
-                                                <th>Coapplicant_Income</th>
-                                                <th>Loan_Amount</th>
-                                                <th>Loan_Amount_Term</th>
-                                                <th>CreditHistory</th>
-                                                <th>Property_Area</th>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Transaction ID</th>
+                                                <th>Sender Name</th>
+                                                <th class="text-right">Transaction</th>
+                                                
+                                                <th class="text-right">Total</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <% if(fraud){
-                                                fraud.forEach(function(fraud){ %>
-                                           
                                             <tr>
-                                                <td><%= fraud.Gender %></td>
-                                                <td><%= fraud.Married %></td>
-                                                <td><%= fraud.Dependents %></td>
-                                                <td><%= fraud.Self_Employed %></td>
-                                                <td>$<%= fraud.ApplicantIncome %></td>
-                                                <td>$<%= fraud.Coapplicant_Income %></td>
-                                                <td>$<%= fraud.LoanAmount %></td>
-                                                <td><%= fraud.Loan_Amount_Term %> Days</td>
-                                                <td><%= fraud.CreditHistory %></td>
-                                                <td><%= fraud.Property_Area %></td>    
-                                            </tr>                                                     
-                                                      <% }) }%>
+                                                <td>2018-09-29 05:57</td>
+                                                <td>100398</td>
+                                                <td>sender 1</td>
+                                                <td class="text-right">$999.00</td>
+                                               
+                                                <td class="text-right">$999.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-28 01:22</td>
+                                                <td>100397</td>
+                                                <td>sender 2</td>
+                                                <td class="text-right">$756.00</td>
+                                              
+                                                <td class="text-right">$756.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-27 02:12</td>
+                                                <td>100396</td>
+                                                <td>sender 3</td>
+                                                <td class="text-right">$22.00</td>
+                                             
+                                                <td class="text-right">$44.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-26 23:06</td>
+                                                <td>100395</td>
+                                                <td>sender 4</td>
+                                                <td class="text-right">$1199.00</td>
+                                               
+                                                <td class="text-right">$1199.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-25 19:03</td>
+                                                <td>100393</td>
+                                                <td>sender 5</td>
+                                                <td class="text-right">$10.00</td>
                                           
+                                                <td class="text-right">$30.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-29 05:57</td>
+                                                <td>100392</td>
+                                                <td>Sender 6</td>
+                                                <td class="text-right">$199.00</td>
+                                           
+                                                <td class="text-right">$1494.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-24 19:10</td>
+                                                <td>100391</td>
+                                                <td>sender 7</td>
+                                                <td class="text-right">$699.00</td>
+                                               
+                                                <td class="text-right">$699.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-22 00:43</td>
+                                                <td>100393</td>
+                                                <td>sender 8</td>
+                                                <td class="text-right">$10.00</td>
+                                              
+                                                <td class="text-right">$30.00</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                             <div class="col-lg-3" >
-                                <h2 class="title-1 m-b-25" style="font-weight: bold; text-decoration: underline;">FRAUDS 
-                                   
-                                    <a href="#" style="font-size: 12px">&nbsp;&nbsp;&nbsp;
-                                        <form action="/Table" method="get" accept-charset="utf-8">
-                                                
-                                                <input type="hidden" name="username" value="<%if(Username){%> <%=Username%><%} %>">
-                                                <input type="hidden" name="email" value="<%if(Email){%> <%=Email%><%} %>">
-                                                <input type="submit" value="View Details">
-                                              </form>
-                                    </a>
-
-                                </h2>
+                                <h2 class="title-1 m-b-25" style="font-weight: bold; text-decoration: underline;">FRAUDS <a href="Table" style="font-size: 12px">&nbsp;&nbsp;&nbsp;View Details</a></h2>
                                 <div class="au-card au-card--bg-blue au-card-top-countries m-b-40" >
                                     <div class="au-card-inner" >
                                         <div class="table-responsive">
                                             <table class="table table-top-countries" >
-                                                <thead>
-                                               <tr>
-                                                <th style="color: black; font-weight: bold;">Gender</th>
-                                                <th style="color: black; font-weight: bold;">Married</th>
-                                                <th style="color: black; font-weight: bold;">Dependents</th>
-                                                <th style="color: black; font-weight: bold;">Self_Employed</th>
-                                                <th style="color: black; font-weight: bold;">ApplicantIncome</th>
-                                                <th style="color: black; font-weight: bold;">Coapplicant_Income</th>
-                                                <th style="color: black; font-weight: bold;">Loan_Amount</th>
-                                                <th style="color: black; font-weight: bold;">Loan_Amount_Term</th>
-                                                <th style="color: black; font-weight: bold;">CreditHistory</th>
-                                                <th style="color: black; font-weight: bold;">Property_Area</th>
-                                            </tr>
-                                        </thead>
+                                                <tbody >
+                                                    <tr >
+                                                        <td style="color: black; font-weight: bold;">Sender Name</td>
+                                                        <td style="color: black; font-weight: bold" class="text-right">Amount</td>
+                                                        <td style="color: black; font-weight: bold">Receiver Name</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sender1</td>
+                                                        <td class="text-right">$70,261.65</td>
+                                                         <td>Receiver1</td>
+                                                        
 
-                        
-                                                    <tbody>
-                                            <% if(fraud1){
-                                                fraud1.forEach(function(fraud){ %>
-                                           
-                                            <tr>
-                                                <td><%= fraud.Gender %></td>
-                                                <td><%= fraud.Married %></td>
-                                                <td><%= fraud.Dependents %></td>
-                                                <td><%= fraud.Self_Employed %></td>
-                                                <td>$<%= fraud.ApplicantIncome %></td>
-                                                <td>$<%= fraud.Coapplicant_Income %></td>
-                                                <td>$<%= fraud.LoanAmount %></td>
-                                                <td><%= fraud.Loan_Amount_Term %> Days</td>
-                                                <td><%= fraud.CreditHistory %></td>
-                                                <td><%= fraud.Property_Area %></td>    
-                                            </tr>                                                     
-                                                      <% }) }%>
-                                          
-                                        </tbody>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sender2</td>
+                                                        <td class="text-right">$46,399.22</td>
+                                                         <td>Receiver2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sender3</td>
+                                                        <td class="text-right">$35,364.90</td> <td>Receiver3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sender4</td>
+                                                        <td class="text-right">$20,366.96</td> <td>Receiver4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sender5</td>
+                                                        <td class="text-right">$10,366.96</td> <td>Receiver5</td>
+
+                                                    </tr>
+                                                     
+                                                
+                                                    
+                                                  
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>
@@ -445,10 +510,68 @@
                         </div>
                          <div class="row">
                             <div class="col-xl-8">
-                                
+                                <!-- RECENT REPORT 2-->
+                                <div class="chart-percent-2" style="width: 480px; margin-right: 0px">
+                                <h3 class="title-3 m-b-30" style="font-weight: bold; text-decoration: underline; ">FRADULENT PAYMENT'S CHART </h3>
+                                <div class="chart-wrap">
+                                    <canvas id="percent-chart2"></canvas>
+                                    <div id="chartjs-tooltip">
+                                        <table></table>
+                                    </div>
+                                </div>
+                                <div class="chart-info">
+                                    <div class="chart-note">
+                                        <span class="dot dot--blue"></span>
+                                        <span>successful</span>
+                                    </div>
+                                    <div class="chart-note">
+                                        <span class="dot dot--red"></span>
+                                        <span>fraud</span>
+                                    </div>
+                                </div>
+                            </div>
+                                <!-- END RECENT REPORT 2             -->
                             </div>
                             <div class="col-xl-4" >
-                           
+                                <!-- TASK PROGRESS-->
+                                <div class="task-progress" style="width: 450px; height: 435px; float: right; margin-left: 30px ">
+                                    <h3 class="title-3"style="font-weight: bold; text-decoration: underline; ">TRANSACTIONAL DETAILS</h3>
+                                    <div class="au-skill-container" >
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">transactions</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="90">
+                                                    <span class="au-progress__value js-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">successful</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="70">
+                                                    <span class="au-progress__value js-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">frauds</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="30">
+                                                    <span class="au-progress__value js-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">warnings</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="40">
+                                                    <span class="au-progress__value js-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END TASK PROGRESS-->
                             </div>
                         </div>
                      

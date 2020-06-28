@@ -270,10 +270,10 @@
                                                 <td><%= fraud.Married %></td>
                                                 <td><%= fraud.Dependents %></td>
                                                 <td><%= fraud.Self_Employed %></td>
-                                                <td><%= fraud.ApplicantIncome %></td>
-                                                <td><%= fraud.Coapplicant_Income %></td>
-                                                <td><%= fraud.Loan_Amount %></td>
-                                                <td><%= fraud.Loan_Amount_Term %></td>
+                                                <td>$<%= fraud.ApplicantIncome %></td>
+                                                <td>$<%= fraud.Coapplicant_Income %></td>
+                                                <td>$<%= fraud.LoanAmount %></td>
+                                                <td><%= fraud.Loan_Amount_Term %> Days</td>
                                                 <td><%= fraud.CreditHistory %></td>
                                                 <td><%= fraud.Property_Area %></td> 
                                                  <td><form action="/approve" method="get" accept-charset="utf-8">
