@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import sys
-
+import json
 #######################################
 # Data Cleaning Part
 df1=pd.read_csv('ULoan_Tarin',index_col=False)
@@ -58,25 +58,54 @@ def pred(row_num,DataFram):
 def stats(DataFram):
 	print(DataFram.describe())
 
+def plotFraud(dfObj):
+	plt.style.use('fivethirtyeight')
+	test = pd.read_csv('ULoan_Test',index_col=False)
+	per = round((len(dfObj) / len(test)) * 100,2)
+
+	fig = plt.figure()
+	ax = fig.add_axes([0,0,1,1])
+	ax.axis('equal')
+	langs = ['Fraud','No Fraud']
+	students = [per,100-per]
+	ax.pie(students, labels = langs,autopct='%1.2f%%')
+	# plt.show()
+	plt.savefig('foo.png')
+
+def plotGraduate(fraud):
+	sns_plot = sns.countplot(x = fraud['Gender'], hue = fraud['Education'])
+	sns_plot.figure.savefig("output.png")
+	
+def saveJSON(person_dict):
+	with open('data.txt', 'w') as json_file:
+		json.dump(person_dict, json_file)
 
 def main():
 	'''
 	Starting Point of the program
 	'''
 	df3=pd.read_csv('ULoan_Test',index_col=False)
-	lol=df3
+	Payments=df3
 
 	count=list()
-	for i in range(0,len(lol),1):
-		x = pred(i,lol)
+	for i in range(0,len(Payments),1):
+		x = pred(i,Payments)
 		count.append(x)
 	
 	indices = [i for i, x in enumerate(count) if x == "0"]
 	dfObj = pd.DataFrame(columns=['Gender','Married','Dependents','Education','Self_Employed','ApplicantIncome','CoapplicantIncome','LoanAmount','Loan_Amount_Term','Credit_History','Property_Area'])
 	for i in indices:
-		dfObj=dfObj.append({'Gender':lol.loc[i]['Gender'],'Married':lol.loc[i]['Married'],'Dependents':lol.loc[i]['Dependents'],'Education':lol.loc[i]['Education'],'Self_Employed':lol.loc[i]['Self_Employed'],'ApplicantIncome':lol.loc[i]['ApplicantIncome'],'CoapplicantIncome':lol.loc[i]['CoapplicantIncome'],'LoanAmount':lol.loc[i]['LoanAmount'],'Loan_Amount_Term':lol.loc[i]['Loan_Amount_Term'],'Credit_History':lol.loc[i]['Credit_History'],'Property_Area':lol.loc[i]['Property_Area']},ignore_index=True)
+		dfObj=dfObj.append({'Gender':Payments.loc[i]['Gender'],'Married':Payments.loc[i]['Married'],'Dependents':Payments.loc[i]['Dependents'],'Education':Payments.loc[i]['Education'],'Self_Employed':Payments.loc[i]['Self_Employed'],'ApplicantIncome':Payments.loc[i]['ApplicantIncome'],'CoapplicantIncome':Payments.loc[i]['CoapplicantIncome'],'LoanAmount':Payments.loc[i]['LoanAmount'],'Loan_Amount_Term':Payments.loc[i]['Loan_Amount_Term'],'Credit_History':Payments.loc[i]['Credit_History'],'Property_Area':Payments.loc[i]['Property_Area']},ignore_index=True)
 
 	dfObj.to_csv('fraud',index=False)
+	malePercent=round((Payments[Payments['Gender']==1].count()[0] / len(Payments)) * 100,2)
+	femalePercent=round((Payments[Payments['Gender']==0].count()[0] / len(Payments)) * 100,2)
+	marriedPercent=round((Payments[Payments['Married']==1].count()[0] / len(Payments)) * 100,2)
+	unmarriedPercent=round((Payments[Payments['Married']==0].count()[0] / len(Payments)) * 100,2)
+	#plotFraud(dfObj)
+	person_dict={'malePercent':malePercent,'femalePercent':femalePercent,'marriedPercent':marriedPercent,'unmarriedPercent':unmarriedPercent}
+	#plotGraduate(dfObj)
+	saveJSON(person_dict)
 	
 if __name__ == '__main__':
 	main()
