@@ -4,15 +4,14 @@ Machine Learning Based Fraud Detection Application using Test Driven Development
 <p align="center">
     <img alt="DetectFraud logo" title="DetectFraud Logo" src="DetectFraudLogo.png">
 </p>
-<p align="center">
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-  
-</p>
+
 
 # AngularSpree
 
