@@ -28,7 +28,7 @@ It is ready made application for fraud detection on small scall, it is designed 
 
 ## Features
 
-Please check the online demo [here](https://www.aviacommerce.org/demo/demo.html).
+![GIF demo](https://github.com/u-ahmedofficial/DetectFraud/blob/master/DetectFraud.gif)
 
 ### Features of this appliction are:-
 
