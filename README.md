@@ -4,6 +4,7 @@ Machine Learning Based Fraud Detection Application using Test Driven Development
 <p align="center">
     <img alt="DetectFraud logo" title="DetectFraud Logo" src="DetectFraudLogo.png">
 </p>
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
