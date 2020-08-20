@@ -45,7 +45,7 @@ It is ready made application for fraud detection on small scall, it is designed 
 - 👍 Connect on [Facebook](https://www.facebook.com/u.ahmedofficial)
 - 🕊 Twitter: [@UmairAhmed](https://twitter.com/u_ahmedofficial) - Get the latest news
 - 🗨 [Chat](https://linkedin.com/in/umairahmedofficial) - Discussions
-- Shout out to Mazhar and Abdul Rehman for helping out.
+- Shout out to Mazhar, Ehtisham and Abdul Rehman for helping out.
 
 
 
