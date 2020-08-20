@@ -1,8 +1,8 @@
-# DetectFraud
-Machine Learning Based Fraud Detection Application using Test Driven Development Approach
+# DetectFraud - AI-Based Fraud Detection System
+Machine Learning Based Fraud Detection Application using Test Driven Development Approach.
 
 <p align="center">
-    <img alt="Aviacommerce logo" title="Aviacommerce Logo" src="https://res.cloudinary.com/aviabird/image/upload/h_250/v1539065176/aviacommerce/logo/main.png">
+    <img alt="DetectFraud logo" title="Aviacommerce Logo" src="https://res.cloudinary.com/aviabird/image/upload/h_250/v1539065176/aviacommerce/logo/main.png">
 </p>
 <p align="center">
   <a href="https://travis-ci.com/aviacommerce/avia">
