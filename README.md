@@ -2,24 +2,16 @@
 Machine Learning Based Fraud Detection Application using Test Driven Development Approach.
 
 <p align="center">
-    <img alt="DetectFraud logo" title="Aviacommerce Logo" src="DetectFraudLogo.png">
+    <img alt="DetectFraud logo" title="DetectFraud Logo" src="DetectFraudLogo.png">
 </p>
 <p align="center">
-  <a href="https://travis-ci.com/aviacommerce/avia">
-    <img src="https://travis-ci.com/aviacommerce/avia.svg?branch=develop" alt="travis" title="build-status"/>
-  </a>
-  <a href="https://codecov.io/gh/aviacommerce/avia">
-    <img src="https://codecov.io/gh/aviacommerce/avia/branch/develop/graph/badge.svg" alt="codecov" title="coverage-status"/>
-  </a>
-  <a href="http://inch-ci.org/github/aviacommerce/avia">
-    <img src="http://inch-ci.org/github/aviacommerce/avia.svg?branch=develop" alt="inch-ci" title="doc-status"/>
-  </a>
-  <a href="https://www.pivotaltracker.com/n/projects/2149807">
-    <img src="http://res.cloudinary.com/zeus999/image/upload/c_limit,h_1041,w_1487/v1486457388/Yatrum%20Logo/pt-badge_ss3dyt.svg" alt="pivotal" title="project-tracker"/>
-  </a>
-   <a href="">
-    <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat" alt="license" title="Software License"/>
-  </a>
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+  
 </p>
 
 # AngularSpree
@@ -80,4 +72,18 @@ Please check the online demo [here](https://www.aviacommerce.org/demo/demo.html)
 This project is an open-source initiative by[ Aviabird Technologies](https://aviabird.com) under the [Aviacommerce](https://aviacommerce.org) open-source project.
 
 For any questions or suggestions send a mail to `hello@aviabird.com` or chat with the core-team on [gitter](https://gitter.im/avia-commerce/Lobby).
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/u-ahmedofficial/DetectFraud.svg?style=flat-square
+[contributors-url]: https://github.com/u-ahmedofficial/DetectFraud/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/u-ahmedofficial/DetectFraud.svg?style=flat-square
+[forks-url]: https://github.com/u-ahmedofficial/DetectFraud/network/members
+[stars-shield]: https://img.shields.io/github/stars/u-ahmedofficial/DetectFraud.svg?style=flat-square
+[stars-url]: https://github.com/u-ahmedofficial/DetectFraud/stargazers
+[issues-shield]: https://img.shields.io/github/issues/u-ahmedofficial/DetectFraud.svg?style=flat-square
+[issues-url]: https://github.com/u-ahmedofficial/DetectFraud/issues
+[license-shield]: https://img.shields.io/github/license/u-ahmedofficial/DetectFraud.svg?style=flat-square
+[license-url]: https://github.com/u-ahmedofficial/DetectFraud/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/umairahmedofficial/
 
