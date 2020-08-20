@@ -4,7 +4,6 @@ Machine Learning Based Fraud Detection Application using Test Driven Development
 <p align="center">
     <img alt="DetectFraud logo" title="DetectFraud Logo" src="DetectFraudLogo.png">
 </p>
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -13,64 +12,39 @@ Machine Learning Based Fraud Detection Application using Test Driven Development
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-# AngularSpree
+**DetectFraud is a NodeJs Application.**
 
-**AngularSpree is an Angular(7) e-commerce application.**
+It is ready made application for fraud detection on small scall, it is designed and developed on Test-Driven Development (TDD) Approach, highly scalable and flexible application, can be deployed in few clicks.
 
-It is a plug and play frontend application for [AviaCommerce API](https://www.aviacommerce.org/docs/apis-getting-started.html) built using Angular(7), Redux, Observables & ImmutableJs.
+**It is not limited to fraud detection, the algorithm can be replaced for any kind of detection and analytics purpose**
 
-**It is not limited to aviacommerce and can also be used with any e-commerce solution with an api interface. Such as spreecommerce, magento, opencart etc.**
+**Why DetectFraud?**
 
-- 🌍 [aviacommerce](https://aviacommerce.org/) - Learn more about AngularSpree
-- 📖 [Documentation](https://www.aviacommerce.org/docs/frontend-install.html)
-- 📚 [API Documentation](https://www.aviacommerce.org/docs/apis-getting-started.html)
-- 👍 Like us on [Facebook](https://www.facebook.com/aviacommerce)
-- 🕊 Twitter: [@aviacommerce](https://twitter.com/aviacommerce) - Get the latest news
-- 🐞 Issue Tracker: - [Issues](https://github.com/aviacommerce/avia/issues) - Report bugs here
-- 🗨 [Forums](https://forum.aviacommerce.org/) - Discussions(Coming soon)
-- 👪 [Community Chat](https://gitter.im/avia-commerce/Lobby) - Gitter
-
-### Important Note
-
-AngularSpree is now a part of [Aviacommerce Project](https://aviacommerce.org). Further development of angularspree will happen in _this repository only_. Also, check the [aviacommerce repo](https://github.com/aviacommerce/avia) where this repository exists as a submodule.
+1. Fraud Detection
+2. Fraud Forecasting
+3. Business Analytics
+4. Visualization
 
 ## Features
 
 Please check the online demo [here](https://www.aviacommerce.org/demo/demo.html).
 
-### Features of this mobile appliction are:-
+### Features of this appliction are:-
 
-1. Product List Page
-2. Product Detail Page
-3. Filters by Category, options, size etc
-4. Sort(New arrival, Price)
-5. Advanced searching and autocomplete with Elasticsearch
-6. Add/update to cart
-7. Notifications for order update notification, payment failure
-8. Chat with seller feature, messaging
-9. Payment methods(COD, Stripe, Payubiz, RazorPay and 29 others)
+1. Login Page
+2. Signup Page
+3. Dashboard Visualization
+4. Dynamic Payments Table
+5. Dynamic Fraud Table
+6. Business Analytics
+7. Mark as safe
 
-### Admin has following features for sellers:-
+### Contact:
 
-1. Add/update products/inventory.
-2. Manage orders
-3. Manage Categories/Taxonomies
-4. Support for Variants and Option Types, Option Sets
-5. Shipping settings/policy(free shipping, shipping rules)
-6. Promotions(coupons per user, total usage count)
-7. Manage Users(admin, user types)
-8. Taxation
-9. Send emails and notifications.
+- 👍 Connect on [Facebook](https://www.facebook.com/u.ahmedofficial)
+- 🕊 Twitter: [@UmairAhmed](https://twitter.com/u_ahmedofficial) - Get the latest news
+- 🗨 [Chat](https://linkedin.com/in/umairahmedofficial) - Discussions
 
-### Quick Links
-
-| [Gitter](https://gitter.im/avia-commerce/Lobby) | [Contributing](https://www.aviacommerce.org/docs/how-to-contribute.html) | [API Specs](https://www.aviacommerce.org/docs/apis-getting-started.html) |
-| ----------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-
-
-This project is an open-source initiative by[ Aviabird Technologies](https://aviabird.com) under the [Aviacommerce](https://aviacommerce.org) open-source project.
-
-For any questions or suggestions send a mail to `hello@aviabird.com` or chat with the core-team on [gitter](https://gitter.im/avia-commerce/Lobby).
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/u-ahmedofficial/DetectFraud.svg?style=flat-square
